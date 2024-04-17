@@ -1,0 +1,22 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: nginx-ingress
+  namespace: namespace
+  labels:
+    app: guestbook
+  annotations: {}
+  # https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: myguestbook.com
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: guestbook-svc
+                port:
+                  number: 8080
