@@ -1,6 +1,5 @@
 apiVersion: batch/v1
 kind: CronJob
-# https://kubernetes.io/docs/tasks/job/automated-tasks-with-cron-jobs/
 metadata:
   name: guestbook-cronjob
 spec:
