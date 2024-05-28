@@ -4,19 +4,19 @@ metadata:
   name: nginx-ingress
   namespace: namespace
   labels:
-    app: guestbook
+    app: appinfo
   annotations: {}
 
 spec:
   ingressClassName: nginx
   rules:
-    - host: myguestbook.com
+    - host: localhost
       http:
         paths:
           - path: /
             pathType: Prefix
             backend:
               service:
-                name: guestbook-svc
+                name: appinfo-svc
                 port:
                   number: 8080

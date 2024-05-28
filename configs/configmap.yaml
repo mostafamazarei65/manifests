@@ -4,7 +4,7 @@ metadata:
   name: sample-config
   namespace: namespace
   labels:
-    app: guestbook
+    app: appinfo
 data:
   NUMBER_OF_COMMENTS_PER_PAGE: "200"
   primary.cnf: |

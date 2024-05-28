@@ -9,7 +9,7 @@ metadata:
 spec:
   containers:
   - name: hello-ctr
-    image: nigelpoulton/getting-started-k8s:2.0
+    image: mostafamazarei/appinfo:v1
     ports:
     - containerPort: 8080
     resources:
